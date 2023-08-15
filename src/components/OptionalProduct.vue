@@ -25,15 +25,14 @@
               :type="bagType"
               :color="item"
               class="m-2 lg:m-4"
-              draggable
-              @dragstart="startDrag($event, item)"
+              @phoneSelectProduct="handleSelectProduct"
             />
           </div>
         </div>
         <!-- right -->
         <div 
           class="grow flex flex-col"
-          @drop="onDrop($event)"
+          @drop="handleDrop($event)"
           @dragover.prevent
           @dragenter.prevent
         >
@@ -132,8 +131,11 @@ export default {
     handleBagtype(name) {
       this.bagType = name;
     },
-    onDrop(event) {
+    handleDrop(event) {
       const color = event.dataTransfer.getData('color');
+      this.handleSelectProduct(color);
+    },
+    handleSelectProduct(color) {
       this.showArea[this.bagType] = color;
       this.showAreaChanged ++;
     },
