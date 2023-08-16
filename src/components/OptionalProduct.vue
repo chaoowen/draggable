@@ -36,18 +36,18 @@
           @dragover.prevent
           @dragenter.prevent
         >
-          <section class="p-4 w-full flex flex-col sm:flex-row items-center justify-between">
+          <section class="w-full flex flex-col sm:flex-row items-center justify-between p-4">
             <!-- information -->
             <div class="text-gray-500">拖曳左邊圖像至此區，完成客製化商品</div>
             <div 
-              class="px-3 py-2 bg-rose-900 text-white rounded cursor-pointer"
+              class="my-2 sm:my-0 px-3 py-2 bg-rose-900 text-white rounded cursor-pointer"
               @click="clearShowArea"
             >
               <p>全部清除</p>
             </div> 
           </section>
           <!-- custom product -->
-          <section class="grow relative flex justify-center items-center">
+          <section class="grow relative flex justify-center items-center my-6">
             <div :key="showAreaChanged" class="relative w-40 h-40">
               <div v-if="showArea.outer" :class="['absolute top-0 left-0']">
                 <i class="fa-solid fa-10x fa-suitcase" :style="`color: ${showArea.outer};`"></i>
