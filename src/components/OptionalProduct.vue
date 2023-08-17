@@ -38,7 +38,7 @@
         >
           <section class="w-full flex flex-col sm:flex-row items-center justify-between p-4">
             <!-- information -->
-            <div class="text-gray-500">拖曳左邊圖像至此區，完成客製化商品</div>
+            <div class="text-gray-500">拖曳圖像至此區，完成客製化商品</div>
             <div 
               class="my-2 sm:my-0 px-3 py-2 bg-rose-900 text-white rounded cursor-pointer"
               @click="clearShowArea"
